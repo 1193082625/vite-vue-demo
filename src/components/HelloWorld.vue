@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Button } from 'ant-design-vue'
+// import { Button } from 'ant-design-vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
@@ -9,7 +8,8 @@ const count = ref(0)
 <template>
   <h1>{{ msg }}</h1>
 
-  <Button type="primary">Primary Button</Button>
+  <!-- <Button type="primary">Primary Button</Button> -->
+  <a-button type="primary">Primary Button</a-button>
   <span class="block font-bold text-[16px] mt-[20px]">Hello World</span>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
