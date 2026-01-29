@@ -7,6 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 // 组件自动导入解析器
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -31,4 +32,9 @@ export default defineConfig({
       dts: true, // 生成类型声明文件
     })
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  }
 })
