@@ -31,10 +31,10 @@
 
 ### 安装依赖
 
-pnpm install### 开发
+pnpm install ### 开发
 
-pnpm dev### 构建
+pnpm dev ### 构建
 
-pnpm build### 预览构建结果
+pnpm build ### 预览构建结果
 
-pnpm preview## 📁 项目结构
+pnpm preview ### 📁 项目结构
