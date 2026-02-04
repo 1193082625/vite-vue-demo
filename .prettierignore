@@ -1,6 +1,5 @@
 node_modules
 dist
-*.config.*
 *.specstory
 *.local
 pnpm-lock.yaml
@@ -9,6 +8,4 @@ package-lock.json
 coverage
 .vscode
 .idea
-
 public
-.git
