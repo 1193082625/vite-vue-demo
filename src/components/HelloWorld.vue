@@ -27,13 +27,11 @@ const count = ref(0)
     Learn more about IDE Support for Vue in the
     <a href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support" target="_blank">Vue Docs Scaling up Guide</a>.
   </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p class="read-the-docs font-bold text-red-500">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped lang="scss">
 .read-the-docs {
-  color: #888888;
-
   &:hover {
     color: $primary-color;
   }

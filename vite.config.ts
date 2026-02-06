@@ -5,11 +5,13 @@ import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path'
 import type { PluginOption } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue() as PluginOption,
+    tailwindcss() as PluginOption,
     AutoImport({
       imports: ['vue'],
       dts: './src/auto-imports.d.ts',
@@ -33,7 +35,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/assets/styles/variables.scss";`
+        additionalData: `@use "@/assets/styles/variables.scss" as *;`
       }
     }
   },
