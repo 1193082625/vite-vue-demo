@@ -12,6 +12,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   }
 }

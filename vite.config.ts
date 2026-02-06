@@ -10,23 +10,25 @@ import svgLoader from 'vite-svg-loader'
 
 // https://vite.dev/config/
 export default defineConfig({
+  envDir: './env',
   plugins: [
     vue() as PluginOption,
     tailwindcss() as PluginOption,
     svgLoader() as PluginOption,
     AutoImport({
       imports: ['vue'],
-      dts: './src/auto-imports.d.ts',
+      dts: './auto-imports.d.ts',
+      vueTemplate: true,
       eslintrc: {
         enabled: true,
-        filepath: './src/.eslintrc-auto-import.json',
+        filepath: './.eslintrc-auto-import.json',
       },
     }) as PluginOption,
     Components({
       dirs: ['src/components'],
       extensions: ['vue'],
       deep: true,
-      dts: './src/components.d.ts',
+      dts: './components.d.ts',
       resolvers: [
         AntDesignVueResolver({
           importStyle: false,

@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
+  <div class="flex items-center justify-center">
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -21,9 +21,11 @@ import HelloWorld from './components/HelloWorld.vue'
   transition: filter 300ms;
   will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

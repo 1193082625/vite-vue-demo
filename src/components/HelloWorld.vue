@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import IconList from '@/assets/icons/list.svg'
+import { env } from '@/utils/env'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+const appTitle = computed(() => env.appTitle)
+onMounted(() => {
+  console.log('appTitle', env)
+})
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ appTitle }}</h1>
   <IconList class="icon-current-color w-[40px] h-[40px] text-red-500" />
   <a-button type="primary">Primary Button</a-button>
   <div class="card">

@@ -3,6 +3,7 @@
 一个基于 Vue 3 + TypeScript + Vite 的现代化前端项目模板，集成了完整的代码规范、格式化工具和 Git Hooks 自动化流程。
 
 ## ✨ 特性
+
 - 🎯 **Vue 3** - 使用 `<script setup>` 语法
 - 📘 **TypeScript** - 类型安全
 - 🎨 **代码规范** - ESLint + Prettier + Stylelint

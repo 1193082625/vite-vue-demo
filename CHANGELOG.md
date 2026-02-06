@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-01-XX
 
 ### Added
+
 - 初始版本发布
 - Vue 3 + TypeScript + Vite 项目模板
 - ESLint 9.x 扁平配置
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - VSCode 工作区配置
 
 ### Features
+
 - 完整的代码规范体系
 - 保存自动格式化
 - Git 提交前自动检查
@@ -27,5 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
+
 - CI/CD 集成
 - 更多开发工具集成
