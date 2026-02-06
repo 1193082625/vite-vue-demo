@@ -6,12 +6,14 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path'
 import type { PluginOption } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import svgLoader from 'vite-svg-loader'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue() as PluginOption,
     tailwindcss() as PluginOption,
+    svgLoader() as PluginOption,
     AutoImport({
       imports: ['vue'],
       dts: './src/auto-imports.d.ts',
@@ -28,20 +30,20 @@ export default defineConfig({
       resolvers: [
         AntDesignVueResolver({
           importStyle: false,
-        })
-      ]
+        }),
+      ],
     }) as PluginOption,
   ],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/assets/styles/variables.scss" as *;`
-      }
-    }
+        additionalData: `@use "@/assets/styles/variables.scss" as *;`,
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  }
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 })

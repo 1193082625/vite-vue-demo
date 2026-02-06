@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import IconList from '@/assets/icons/list.svg'
 
 defineProps<{ msg: string }>()
 
@@ -8,7 +9,7 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <IconList class="icon-current-color w-[40px] h-[40px] text-red-500" />
   <a-button type="primary">Primary Button</a-button>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
