@@ -2,13 +2,16 @@
 import { ref, computed, onMounted } from 'vue'
 import IconList from '@/assets/icons/list.svg'
 import { env } from '@/utils/env'
+import { useUserStore } from '@/store/user'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 const appTitle = computed(() => env.appTitle)
+const userStore = useUserStore()
 onMounted(() => {
   console.log('appTitle', env)
+  console.log('userStore', userStore)
 })
 </script>
 

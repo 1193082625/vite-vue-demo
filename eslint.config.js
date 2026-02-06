@@ -28,6 +28,12 @@ export default [
       globals: {
         console: 'readonly',
         process: 'readonly',
+        // 添加浏览器全局对象
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        navigator: 'readonly',
       },
     },
     plugins: {
@@ -100,6 +106,12 @@ export default [
       globals: {
         console: 'readonly',
         process: 'readonly',
+        // 添加浏览器全局对象
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        navigator: 'readonly',
       },
     },
     plugins: {
