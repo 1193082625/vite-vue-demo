@@ -16,7 +16,12 @@
     "type-check": "vue-tsc --noEmit",
     "check": "pnpm lint:check && pnpm format:check && pnpm lint:style:check && pnpm type-check",
     "fix": "pnpm lint && pnpm format && pnpm lint:style",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

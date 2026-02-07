@@ -10,13 +10,14 @@ const count = ref(0)
 const appTitle = computed(() => env.appTitle)
 const userStore = useUserStore()
 onMounted(() => {
-  console.log('appTitle', env)
-  console.log('userStore', userStore)
+  console.log('appTitle', env.appTitle)
+  console.log('userStore', userStore.token)
 })
 </script>
 
 <template>
   <h1>{{ appTitle }}</h1>
+  <p v-if="msg" class="msg">{{ msg }}</p>
   <IconList class="icon-current-color w-[40px] h-[40px] text-red-500" />
   <a-button type="primary">Primary Button</a-button>
   <div class="card">

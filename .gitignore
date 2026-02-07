@@ -31,3 +31,10 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# 测试覆盖率报告
+coverage/
+*.lcov
+
+# Vitest
+.vitest/
