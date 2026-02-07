@@ -6,7 +6,9 @@
         <a-input v-model:value="form.username" />
       </a-form-item>
       <a-form-item name="password" label="Password">
-        <a-input v-model:value="form.password" />
+        <a-input-password v-model:value="form.password" />
+        <!-- 或者使用 a-input 并设置 type -->
+        <!-- <a-input v-model:value="form.password" type="password" /> -->
       </a-form-item>
       <a-form-item>
         <a-button type="primary" html-type="submit">Login</a-button>

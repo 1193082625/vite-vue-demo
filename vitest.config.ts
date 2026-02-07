@@ -24,14 +24,24 @@ export default defineConfig({
     // 测试文件匹配规则
     include: ['tests/**/*.{test,spec}.{js,ts,jsx,tsx}'],
     // 排除文件匹配规则
-    exclude: ['node_modules', 'dist', 'build', 'public', 'static'],
+    // 排除E2E测试（使用Playwright）
+    exclude: ['node_modules', 'dist', 'build', 'public', 'static', 'tests/e2e/**'],
     // 测试前执行的设置文件
     setupFiles: ['./tests/setup.ts'],
     // 启用代码覆盖率
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      exclude: ['node_modules', 'dist', 'build', 'public', 'static', '*/*.d.ts', '*.config.{js,ts,cjs,json}'],
+      exclude: [
+        'node_modules',
+        'dist',
+        'build',
+        'public',
+        'static',
+        '*/*.d.ts',
+        '*.config.{js,ts,cjs,json}',
+        'tests/**',
+      ],
     },
     // 启用测试报告
     report: {
