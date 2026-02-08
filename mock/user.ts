@@ -30,7 +30,21 @@ export default [
   {
     url: '/api/auth/login',
     method: 'post',
-    response: () => {
+    response: ({ body }) => {
+      // 检查用户名和密码
+      const { username, password } = body || {}
+
+      // 如果用户名或密码错误，返回失败
+      if (username !== 'admin' || password !== 'password123') {
+        return {
+          code: 401,
+          message: '用户名或密码错误',
+          success: false,
+          data: null,
+        }
+      }
+
+      // 登录成功
       return {
         code: 200,
         message: '登录成功',

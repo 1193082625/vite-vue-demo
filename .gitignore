@@ -34,7 +34,18 @@ dist-ssr
 
 # 测试覆盖率报告
 coverage/
+.lcov
 *.lcov
 
 # Vitest
 .vitest/
+test-vitest-results/
+
+# Playwright
+playwright/
+playwright-report/
+test-playwright-results/
+
+# 统一测试报告
+/test-results/
+test-results/

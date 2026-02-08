@@ -32,6 +32,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
+      reportsDirectory: './test-vitest-results/coverage', // 添加覆盖率报告目录
       exclude: [
         'node_modules',
         'dist',
@@ -43,11 +44,12 @@ export default defineConfig({
         'tests/**',
       ],
     },
-    // 启用测试报告
-    report: {
-      reporter: ['text', 'json', 'html'],
-      coverage: true,
-    },
+    // 启用测试报告（使用 reporters 配置）
+    reporters: [
+      'default', // 控制台输出
+      ['json', { outputFile: 'test-vitest-results/vitest-results.json' }], // JSON 报告
+      ['html', { outputFile: 'test-vitest-results/vitest-report.html' }], // HTML 报告
+    ],
   },
   resolve: {
     alias: {
