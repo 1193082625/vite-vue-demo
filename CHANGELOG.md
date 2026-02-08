@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-02-08
+
+### Added
+
+- 添加单元测试框架 Vitest
+- 添加端到端测试框架 Playwright
+- 添加测试报告生成脚本
+
+### Changed
+
+- 完善测试配置和测试用例
+
+### Fixed
+
+- 修复测试相关问题
+
 ## [1.1.0] - 2026-02-06
 
 ### Added
